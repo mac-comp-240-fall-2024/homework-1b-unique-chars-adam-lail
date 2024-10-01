@@ -18,8 +18,11 @@
 
 
 /*
- * This function is for debugging by printing out the value
- * of an input insigned long as a binary string.
+ * This function function checks if all printable characters in 
+ * the input string are unique, ignoring spaces and treating uppercase 
+ * and lowercase letters as equivalent. It will exit with error if it encounters
+ * non-printable or invalid characters. Returns true if all characters are unique
+ * or false if duplicates are found. 
  */
 void seeBits(unsigned long value, char *debug_text) {
   
@@ -54,8 +57,12 @@ void checkInvalid(char * inputStr) {
 
 
 /*
- * TODO: Replace this code by a good description this function takes in, does and returns.
- * Include the error conditions that cause it to exit with failure.
+ * This function checks if all printable characters in 
+ * the input string are unique, ignoring spaces and treating uppercase 
+ * and lowercase letters as equivalent. It will exit with error if the 
+ * string contains anything non printable or invalid characters.
+ * Returns true if all characters are unique or false if duplicates
+ * are found. 
  */
 bool hasUniqueChars(char * inputStr) {
 
@@ -74,6 +81,8 @@ bool hasUniqueChars(char * inputStr) {
     if (nextChar == ' ') {
       continue;
     }
+
+     nextChar = tolower(nextChar);
 
     // Characters from 'A' to '~' (ASCII 65 to 126)
     if (nextChar >= 'A' && nextChar <= '~') {
@@ -104,3 +113,4 @@ bool hasUniqueChars(char * inputStr) {
   return true;
   
 }
+  
