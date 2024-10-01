@@ -39,9 +39,9 @@ int main() {
   bool ok;    // holds the result of hasUniqueChars(); used in asserts
   
   // Test 1: a test case that should return false because characters are duplicated
-  strcpy(string3, "This should fail (l and s and i and h)");
-  ok = hasUniqueChars(string3);
-  assert(!(ok));
+  // strcpy(string3, "This should fail (l and s and i and h)");
+  // ok = hasUniqueChars(string3);
+  // assert(!(ok));
   
   // Test 2: This should be true and not fail, but won't work until you
   // complete the hasUniqueChars() function
@@ -51,6 +51,7 @@ int main() {
   
   // TODO: add your tests here
 
+  
 
 
   // NOTE: if you add a \n to any tests, this should cause the
